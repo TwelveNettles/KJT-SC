@@ -1,19 +1,22 @@
 body {
     margin: 2rem;
+    padding: 1rem;
     
     background-color: #eae3ae;
     text-align: center;
 
-
+    border-width: 1rem;
+    border-style: double;
+    border-color: black;
 
 
 }
-
+/* 
 #borderimg {
     border: 50px solid transparent;
 
     border-image: url(border.jpg) 30 round;
-}
+} */
 
 *:focus {
     outline: none;
@@ -46,6 +49,7 @@ main {
 input {
     width: 50%;
     border: none;
+    border-bottom: solid;
     background-color: #eae3ae;
     font-family: 'Schoolbell', cursive;
     font-size: 1.5rem;
@@ -94,3 +98,19 @@ input {
     height: 30px;
     background-color: #04AA6D;
   }
+
+  button {
+    font-family: 'Jim Nightshade', sans-serif;
+    font-size:1.2rem;
+    color: #ffffff;
+
+    width: 10rem;
+
+    margin:1rem;
+    padding:1rem;
+
+    border-width: 3px;
+    border-style: solid;
+    border-color: #000000;
+    background-color:transparent;
+}
