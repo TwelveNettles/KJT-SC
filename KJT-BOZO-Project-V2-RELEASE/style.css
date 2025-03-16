@@ -1,0 +1,96 @@
+body {
+    margin: 2rem;
+    
+    background-color: #eae3ae;
+    text-align: center;
+
+
+
+
+}
+
+#borderimg {
+    border: 50px solid transparent;
+
+    border-image: url(border.jpg) 30 round;
+}
+
+*:focus {
+    outline: none;
+}
+
+header {
+    font-family: 'Jim Nightshade', sans-serif;
+    text-align: center;
+
+    
+}
+
+header h1 {
+    font-size: 7rem;
+}
+
+header h2 {
+    font-size: 3rem;
+}
+
+main {
+    font-family: 'Jim Nightshade', sans-serif;
+    font-size: 1.5rem;
+}
+
+.width-half {
+    width:50%;
+}
+
+input {
+    width: 50%;
+    border: none;
+    background-color: #eae3ae;
+    font-family: 'Schoolbell', cursive;
+    font-size: 1.5rem;
+    text-align: left;
+    padding-left: 1rem;
+}
+
+.flex {
+    display:flex;
+}
+
+.dropcap {
+    aspect-ratio: square;
+    width: 5rem;
+    display:inline;
+    float: left;
+    filter: brightness(0);
+    padding-right: 1rem;
+}
+
+.textwall {
+    padding: 1rem;
+    text-align: justify;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.input-area {
+    font-size: 1.3rem;
+}
+
+#myProgress {
+    width: 100%;
+    background-color: #ddd;
+    display:none;
+  }
+  
+  #myBar {
+    width: 1%;
+    height: 30px;
+    background-color: #04AA6D;
+  }

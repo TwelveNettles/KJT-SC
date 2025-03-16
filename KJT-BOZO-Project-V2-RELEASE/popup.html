@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <title>KJT AI</title>
+
+    </head>
+    <style>
+        
+        .btn-open-popup {
+            padding: 5px 10px;
+            font-size: 18px;
+            background-color: green;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-open-popup:hover {
+            background-color: #4caf50;
+        }
+
+        .overlay-container {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .popup-box {
+            background: #fff;
+            padding: 24px;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+            text-align: center;
+            width: 400px;
+            opacity: 0;
+            transform: scale(0.8); 
+            animation: fadeInUp 0.5s ease-out forwards;
+        }
+
+        .form-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-label {
+            margin-bottom: 10px;
+            font-size: 16px;
+            color: #444;
+            text-align: center;
+        }
+
+        .form-input {
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .btn-submit,
+        .btn-close-popup {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .btn-close-popup {
+            margin-top: 12px;
+            background-color: #e74c3c;
+            color: #fff;
+            font-size: 10px;
+        }
+
+        .btn-submit:hover,
+        .btn-close-popup:hover {
+            background-color: #4caf50;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .overlay-container.show {
+            display: flex;
+            opacity: 1;
+        }
+        
+
+        
+
+    </style>
+
+    <body>
+        <button class="btn-open-popup" onclick="togglePopup()">Human Verification</button>
+        
+        <div id="popupOverlay" 
+        class="overlay-container">
+        <div class="popup-box">
+            <h2 style="color: green;">Is the image below Kevin Jose Thomas</h2>
+                <form class="form-container">
+                    
+                    <img src="e.jpg" id = "images" class="center" width = "400" height = "300">
+                    <a href="test.html" target="_blank">
+                        Load Image
+                    </a>
+                    
+                    <button class="btn-submit" 
+                            type="submit">
+                        Yes
+                    </button>
+                </form>
+                <button class="btn-close-popup" 
+                        onclick="togglePopup()">
+                    Yes...
+                </button>
+            </div>
+        </div>  
+
+
+
+
+        <script>
+
+        function onSubmit() {
+            element.classList.add("loader");
+            var id = setInterval(frame, 100);
+            function frame() {
+                if (loaded >= 100) {
+                    clearInterval(id);
+                    loaded = 0;
+                    element.classList.remove("loader");
+                    typeWriter();
+                } else {
+                    loaded++;
+                }
+            }
+        }
+    
+
+        function typeWriter() {
+            if (charCount < randText.length) {
+                document.getElementById("p1").innerHTML += randText.charAt(charCount);
+                charCount++;
+                setTimeout(typeWriter, speed);
+            }
+        }
+
+        function togglePopup() {
+            const overlay = document.getElementById('popupOverlay');
+            overlay.classList.toggle('show');
+        }
+        
+        
+
+        
+
+        
+
+        </script>
+    </body>
+</html>
